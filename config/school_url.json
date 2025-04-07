@@ -1,0 +1,42 @@
+[
+  {
+    "school": "ERAU",
+    "urls": [
+      "https://news.erau.edu/headlines/embry-riddle-earns-top-five-national-ranking-for-aerospace-engineering-plus-best-in-west",
+      "https://daytonabeach.erau.edu/",
+      "https://erau.edu/degrees/bachelor/aerospace-engineering",
+      "https://erau.edu/degrees/bachelor/mechanical-engineering",
+      "https://daytonabeach.erau.edu/admissions/faq",
+      "https://daytonabeach.erau.edu/admissions/apply",
+      "https://daytonabeach.erau.edu/admissions/undergraduate/first-time",
+      "https://daytonabeach.erau.edu/admissions/estimated-costs"
+    ]
+  },
+  {
+    "school": "TAMU",
+    "urls": [
+      "https://www.tamu.edu/",
+      "https://www.tamu.edu/admissions/how-to-apply/apply-as-freshman.html",
+      "https://www.tamu.edu/academics/colleges-schools/college-of-engineering.html",
+      "https://engineering.tamu.edu/aerospace/index.html",
+      "https://engineering.tamu.edu/aerospace/research/index.html",
+      "https://engineering.tamu.edu/aerospace/research/centers-and-laboratories.html",
+      "https://engineering.tamu.edu/aerospace/advising/scholarships-and-aid/undergraduate-funding/index.html",
+      "https://engineering.tamu.edu/academics/undergraduate/entry-to-a-major/essays.html",
+      "https://tuition.tamu.edu/undergraduate",
+      "https://aggie.tamu.edu/financial-aid/types-of-aid/scholarships/undergraduate-scholarships"
+    ]
+  },
+  {
+    "school": "University of Colorado -BOULDER",
+    "urls": [
+      "https://www.colorado.edu/academics/bs-aerospace-engineering",
+      "https://www.colorado.edu/about/rankings-achievements",
+      "https://www.colorado.edu/admissions/process/first-year/faqs",
+      "https://www.colorado.edu/admissions/process/first-year/plan#accordion-ee24f556e0ae2a998700d9d4ebe966e89-1",
+      "https://www.colorado.edu/center/aerospacemechanics/",
+      "https://www.colorado.edu/career/internships",
+      "https://www.colorado.edu/resources/life-cu-boulder"
+    ]
+  }
+]

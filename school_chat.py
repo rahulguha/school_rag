@@ -21,7 +21,7 @@ class MemoryChatAgent:
         self.conversation_history = []
         self.max_memory_length = 10
         self.base_db = VectorDB("school_db")
-        
+        print(self.client)
 
     
     def _add_to_memory(self, user_message, ai_response):
@@ -86,6 +86,37 @@ class MemoryChatAgent:
             source += f"\n{u}" 
         return source
 
+    def api_chat(self, user_message):
+        """
+        Generate a response using the Anthropic API with conversation context.
+        
+        :param user_message: Message from the user
+        :return: AI's response
+        """
+        try:
+
+            llm = LLMResponse(self.client)
+            
+            
+            # Prepare the full context including conversation history
+            messages = self._prepare_context() + [
+                {"role": "user", "content": user_message}
+            ]
+            query = self.dicts_to_string(messages)
+            print("API" + query)
+            reranked_chunks = retrieve_rerank(user_message,self.base_db,5)
+            
+            ai_response = f"{llm.generate_response(query , reranked_chunks)}\n\n{self.get_source_urls(reranked_chunks)}"  
+            # pprint.pprint(self.get_source_urls(reranked_chunks))
+
+            self._add_to_memory(user_message, ai_response)
+            
+            return ai_response
+        
+        except Exception as e:
+            return f"An error occurred: {str(e)}"
+    
+
     def chat(self, user_message, chat_client):
         """
         Generate a response using the Anthropic API with conversation context.
@@ -94,6 +125,7 @@ class MemoryChatAgent:
         :return: AI's response
         """
         try:
+
             # Prepare the full context including conversation history
             messages = self._prepare_context() + [
                 {"role": "user", "content": user_message}
